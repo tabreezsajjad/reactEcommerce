@@ -11,7 +11,7 @@ class SubListMenu extends Component {
             // {console.log(subBelow)}
              return (
                
-                <li key={subl.uniqueID}><Link to = {`/Apparel/Girls/${subl.name}/${subl.uniqueID}`}>{subl.name}</Link></li>
+                <li className="dropdown-item dropdown" key={subl.uniqueID}><Link to = {`/Apparel/Girls/Category/${subl.uniqueID}`}>{subl.name}</Link></li>
 
              )
           })

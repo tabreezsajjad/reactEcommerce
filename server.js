@@ -33,6 +33,17 @@ app.get('/topCategory', (req, res) => {
  });
 
 
- 
+ app.get('/product/:id', (req, res) => {
+    var id = req.params.id;
+    console.log(req.params.id)
+   var client = new Client();
+
+   // direct way
+   client.get("http://149.129.128.3:3737/search/resources/store/1/productview/byId/"+id, (data, response) => {
+    res.send({ express: data });
+   });
+});
+
+
 const port = 3030;
 app.listen(port, () => console.log(`Server running on port${port}`));

@@ -11,12 +11,12 @@ class SubMenu extends Component {
 
                 <React.Fragment>
 
-                    <li key={sub.uniqueID}>
+                    <li key={sub.uniqueID} className="dropdown-item dropdown" >
 
-                        <a>{sub.name}</a>
+                        <a className="dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{sub.name}</a>
 
                         {
-                            <ul className="sub-menu">
+                            <ul className="" aria-labelledby="navbarDropdown2">
                                 {sub.catalogGroupView !== undefined && <SubListMenu id={sub.uniqueID} subBelow={sub.catalogGroupView} />}
                             </ul>
 
